@@ -33,9 +33,3 @@ jobs:
       env:
         SPARK_HOME: ${{ env.SPARK_HOME }}
 
-    - name: Notify on failure
-      if: failure()
-      uses: actions/email@v1
-      with:
-        subject: 'Unit tests failed on branch: ${{ github.ref }}'
-        to: vishwesh.bharati@gmail.com
